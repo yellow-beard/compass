@@ -65,7 +65,7 @@ module Compass
       end
 
       def dummy_engine(engine, options)
-        new_options = engine.options.merge(:filename => "(NOT IMPORTED) #{engine.options[:filename]}" )
+        new_options = engine.options.merge(:filename => engine.options[:filename])
         Sass::Engine.new("", new_options)
       end
 
